@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Tongariro Cinemas</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="JQuery.js"></script>             <!-- Using JQuery framework -->
+</head>
+<body>
+    <header>
+        <div class="logo-container">         <!--making a logo-container as a class for making a logo for the website-->
+            <a href="index.html"> <!--logo takes to the home page-->
+            <img src="images/logo.jpg" alt="Tongariro Cinemas" class="logo"></a>
+        </div>
+        <h1>Your Cart</h1>
+        <nav>
+           <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li>Search</li>         <!--This is the Navigation Bar and 3 of the pages are linked-->
+                <li>Collabs</li>
+                <li>News</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="cart-items">
+            <div class="cart-item">
+                <img src="images/mp3.jpg" alt="Movie 1">
+                <div class="item-details">  <!--making classes to make items added in the cart-->
+                    <h3>Migration</h3>
+                    <p>Director: Benjamin Renner </p>
+                    <p>Cast: Awkwafina, Kumail Nanjiani</p>
+                    <p>Price: $10.99</p>
+                </div>
+            </div>
+            <div class="cart-item">
+                <img src="images/nr1.jpeg" alt="Movie 2">
+                <div class="item-details">
+                    <h3>Ghostbusters</h3>
+                    <p>Director: Ivan Reitman</p>
+                    <p>Cast: Bill Murray, Dan Aykroyd</p>
+                    <p>Price: $12.99</p>
+                </div>
+            </div>
+        </div>
+        <div class="cart-total">   <!--for displaying the total price-->
+            <h3>Total Price: $23.98</h3>
+            <button id="proceed-to-checkout-btn" class="proceed-to-checkout-btn">Proceed to Checkout</button>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Tongariro Cinemas. All rights reserved.</p><!--footer consistent for all the pages-->
+    </footer>
+
+    <!--Java script code for event listening button which shows a message-->
+    <script>
+    $(document).ready(function() {
+        $('#proceed-to-checkout-btn').click(function() {
+            alert('Proceeding to checkout!');             
+        });
+    });
+    </script> 
+</body>
+</html>

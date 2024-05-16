@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details - Tongariro Cinemas</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Using JQuery framework -->
+    <script src="JQuery.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html">  <!--making a logo-container as a class for making a logo for the website-->
+            <img src="images/logo.jpg" alt="Tongariro Cinemas" class="logo"></a> <!--logo takes to the home page-->
+        </div>
+        <h1>Movie Details</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li>Search</li>             <!--This is the Navigation Bar and 3 of the pages are linked-->
+                <li>Collabs</li>
+                <li>News</li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="movie-details"><!--classes has been made to give css to the movie details-->
+            <div class="movie-image">
+                <img src="images/nr2.jpeg" alt="Movie Image">
+            </div>
+            <div class="movie-info">
+                <h2>Title: Harry Potter and the Deathly Hallows (Part-2)</h2>
+                <p><strong>Cast:</strong> Daniel Radcliffe, Emma Watson, Rupert Grint</p>
+                <p><strong>Director:</strong> David Yates</p>
+                <p><strong>Overview:</strong> Harry, Ron, and Hermione search for Voldemort's remaining Horcruxes<p> in their effort to destroy the Dark Lord as the final battle rages on at Hogwarts.</p>
+                <p><strong>Star Rating:</strong> ★★★★☆</p>
+                <p><strong>Genres:</strong> Adventure, Family, Fantasy</p>
+                <button id ="add-to-cart-btn" class="proceed-to-checkout-btn">Add to Cart</button> <!--button created using button id-->
+            </div>
+        </div>
+    </main>
+   
+    <footer>
+        <p>&copy; 2024 Tongariro Cinemas. All rights reserved.</p><!--footer consistent for all pages-->
+    </footer>
+    <script>
+    $(document).ready(function() {
+        // Add to Cart button click event
+        $('#add-to-cart-btn').click(function() {  // Eventlistening button which displays a message
+            alert('Item added to cart!');
+        });
+
+    });
+    </script>
+</body>
+
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Tongariro Cinemas</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Using JQuery framework -->
+    <script src="JQuery.js"></script>  
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html">    <!--making a logo-container as a class for making a logo for the website-->
+         <img src="images/logo.jpg" alt="Tongariro Cinemas" class="logo"></a> <!--logo takes to the home page-->
+        </div>
+        <h1>Login to Tongariro Cinemas</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li>Search</li>                 <!--This is the Navigation Bar and 3 of the pages are linked-->
+                <li>Collabs</li>
+                <li>News</li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--This login form has been coded inside main tags and label for, input type has been used to create the form-->
+        <main>
+            <form id="loginForm"> 
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <br>
+                <button type="submit">Login</button>
+            </form>
+            <!--eventlistening button which gives a message-->
+            <div id="loginMessage"></div>
+        </main>
+    
+    <footer>
+        <p>&copy; 2024 Tongariro Cinemas. All rights reserved.</p>
+    </footer> <!---footer same for all the pages-->
+   <!--Java script programme for login form which gives various functions-->
+    <script>
+        $(document).ready(function() {
+            $('#loginForm').submit(function(event) {
+                event.preventDefault(); // Prevent the default form submission
+                var username = $('#username').val();
+                var password = $('#password').val();
+              
+                $('#loginMessage').text('Logging in as ' + username + '...'); //logging in message
+            });
+        });
+    </script>
+</body>
+</html>
